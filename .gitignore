@@ -1,0 +1,50 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+dist/
+build/
+
+# Virtual Environment
+venv/
+env/
+ENV/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Environment Variables
+.env
+.env.local
+
+# Logs
+*.log
+logs/
+
+# Operating System
+.DS_Store
+Thumbs.db
+
+# Project Specific
+lab3_execution_trace.txt
+lab3_execution.log
+lab4_message_log.txt
+lab4_message_log.json
+lab4_execution.log
+fsm_diagrams_text.txt
+*.png
+*.pdf
+*.svg
+
+# Temporary files
+*.tmp
+*.bak
+git_commands.txt
+RUN_COMMANDS.md
