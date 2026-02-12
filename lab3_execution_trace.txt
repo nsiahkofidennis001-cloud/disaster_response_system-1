@@ -1,0 +1,192 @@
+================================================================================
+EXECUTION TRACE - DISASTER RESPONSE MULTI-AGENT SYSTEM
+Generated: 2026-02-11 16:01:15
+================================================================================
+
+
+================================================================================
+Agent: Rescue Unit Alpha (ID: R001)
+================================================================================
+
+STATE HISTORY:
+--------------------------------------------------------------------------------
+[2026-02-11 16:01:15.636] State: idle - initialized
+[2026-02-11 16:01:15.653] State: responding - transition from RescueAgentState.IDLE due to BUILDING_COLLAPSE
+
+GOALS:
+--------------------------------------------------------------------------------
+- [ACTIVE] Respond to emergency events within minimal time (Priority: 5)
+- [PENDING] Locate and rescue trapped individuals (Priority: 5)
+- [PENDING] Transport rescued victims to medical facilities (Priority: 4)
+
+EXECUTION TRACE:
+--------------------------------------------------------------------------------
+[2026-02-11 16:01:15.636] [R001] Agent Rescue Unit Alpha initialized in state RescueAgentState.IDLE
+[2026-02-11 16:01:15.637] [R001] Goal added: Respond to emergency events within minimal time
+[2026-02-11 16:01:15.637] [R001] Goal added: Locate and rescue trapped individuals
+[2026-02-11 16:01:15.638] [R001] Goal added: Transport rescued victims to medical facilities
+[2026-02-11 16:01:15.650] [R001] Event received: BUILDING_COLLAPSE - {'location': (15, 20), 'damage_level': 0.9, 'trapped_people': 5}
+[2026-02-11 16:01:15.651] [R001] Processing event: BUILDING_COLLAPSE
+[2026-02-11 16:01:15.652] [R001] Responding to BUILDING_COLLAPSE at location (15, 20)
+[2026-02-11 16:01:15.653] [R001] State transition: RescueAgentState.IDLE -> RescueAgentState.RESPONDING (triggered by BUILDING_COLLAPSE)
+[2026-02-11 16:01:15.653] [R001] Moving to target: now at (1, 1)
+[2026-02-11 16:01:15.654] [R001] Moving to target: now at (2, 2)
+[2026-02-11 16:01:15.654] [R001] Moving to target: now at (3, 3)
+[2026-02-11 16:01:15.655] [R001] Moving to target: now at (4, 4)
+[2026-02-11 16:01:15.655] [R001] Moving to target: now at (5, 5)
+[2026-02-11 16:01:15.656] [R001] Moving to target: now at (6, 6)
+[2026-02-11 16:01:15.657] [R001] Moving to target: now at (7, 7)
+[2026-02-11 16:01:15.657] [R001] Moving to target: now at (8, 8)
+[2026-02-11 16:01:15.658] [R001] Moving to target: now at (9, 9)
+[2026-02-11 16:01:15.658] [R001] Moving to target: now at (10, 10)
+[2026-02-11 16:01:15.659] [R001] Moving to target: now at (11, 11)
+[2026-02-11 16:01:15.659] [R001] Moving to target: now at (12, 12)
+[2026-02-11 16:01:15.660] [R001] Moving to target: now at (13, 13)
+[2026-02-11 16:01:15.660] [R001] Moving to target: now at (14, 14)
+[2026-02-11 16:01:15.661] [R001] Moving to target: now at (15, 15)
+[2026-02-11 16:01:15.662] [R001] Moving to target: now at (15, 16)
+[2026-02-11 16:01:15.662] [R001] Moving to target: now at (15, 17)
+[2026-02-11 16:01:15.662] [R001] Moving to target: now at (15, 18)
+[2026-02-11 16:01:15.663] [R001] Moving to target: now at (15, 19)
+[2026-02-11 16:01:15.664] [R001] Moving to target: now at (15, 20)
+
+
+================================================================================
+Agent: Rescue Unit Bravo (ID: R002)
+================================================================================
+
+STATE HISTORY:
+--------------------------------------------------------------------------------
+[2026-02-11 16:01:15.638] State: idle - initialized
+
+GOALS:
+--------------------------------------------------------------------------------
+- [PENDING] Respond to emergency events within minimal time (Priority: 5)
+- [PENDING] Locate and rescue trapped individuals (Priority: 5)
+- [PENDING] Transport rescued victims to medical facilities (Priority: 4)
+
+EXECUTION TRACE:
+--------------------------------------------------------------------------------
+[2026-02-11 16:01:15.638] [R002] Agent Rescue Unit Bravo initialized in state RescueAgentState.IDLE
+[2026-02-11 16:01:15.639] [R002] Goal added: Respond to emergency events within minimal time
+[2026-02-11 16:01:15.640] [R002] Goal added: Locate and rescue trapped individuals
+[2026-02-11 16:01:15.640] [R002] Goal added: Transport rescued victims to medical facilities
+
+
+================================================================================
+Agent: Medical Team Alpha (ID: M001)
+================================================================================
+
+STATE HISTORY:
+--------------------------------------------------------------------------------
+[2026-02-11 16:01:15.641] State: idle - initialized
+[2026-02-11 16:01:15.669] State: dispatched - transition from MedicalAgentState.IDLE due to MEDICAL_EMERGENCY
+
+GOALS:
+--------------------------------------------------------------------------------
+- [ACTIVE] Reach medical emergency quickly (Priority: 5)
+- [PENDING] Stabilize and treat injured patients (Priority: 5)
+- [PENDING] Transport critical patients to medical facilities (Priority: 4)
+
+EXECUTION TRACE:
+--------------------------------------------------------------------------------
+[2026-02-11 16:01:15.641] [M001] Agent Medical Team Alpha initialized in state MedicalAgentState.IDLE
+[2026-02-11 16:01:15.642] [M001] Goal added: Reach medical emergency quickly
+[2026-02-11 16:01:15.642] [M001] Goal added: Stabilize and treat injured patients
+[2026-02-11 16:01:15.643] [M001] Goal added: Transport critical patients to medical facilities
+[2026-02-11 16:01:15.667] [M001] Event received: MEDICAL_EMERGENCY - {'location': (10, 15), 'injured_count': 8, 'severity': 'critical', 'needs_evacuation': True}
+[2026-02-11 16:01:15.668] [M001] Processing event: MEDICAL_EMERGENCY
+[2026-02-11 16:01:15.669] [M001] Dispatched to medical emergency at (10, 15) (8 injured, severity: critical)
+[2026-02-11 16:01:15.669] [M001] State transition: MedicalAgentState.IDLE -> MedicalAgentState.DISPATCHED (triggered by MEDICAL_EMERGENCY)
+[2026-02-11 16:01:15.670] [M001] Moving to emergency: now at (1, 1)
+[2026-02-11 16:01:15.670] [M001] Moving to emergency: now at (2, 2)
+[2026-02-11 16:01:15.671] [M001] Moving to emergency: now at (3, 3)
+[2026-02-11 16:01:15.671] [M001] Moving to emergency: now at (4, 4)
+[2026-02-11 16:01:15.672] [M001] Moving to emergency: now at (5, 5)
+[2026-02-11 16:01:15.672] [M001] Moving to emergency: now at (6, 6)
+[2026-02-11 16:01:15.673] [M001] Moving to emergency: now at (7, 7)
+[2026-02-11 16:01:15.673] [M001] Moving to emergency: now at (8, 8)
+[2026-02-11 16:01:15.674] [M001] Moving to emergency: now at (9, 9)
+[2026-02-11 16:01:15.675] [M001] Moving to emergency: now at (10, 10)
+[2026-02-11 16:01:15.675] [M001] Moving to emergency: now at (10, 11)
+[2026-02-11 16:01:15.675] [M001] Moving to emergency: now at (10, 12)
+[2026-02-11 16:01:15.676] [M001] Moving to emergency: now at (10, 13)
+[2026-02-11 16:01:15.676] [M001] Moving to emergency: now at (10, 14)
+[2026-02-11 16:01:15.677] [M001] Moving to emergency: now at (10, 15)
+
+
+================================================================================
+Agent: Medical Team Bravo (ID: M002)
+================================================================================
+
+STATE HISTORY:
+--------------------------------------------------------------------------------
+[2026-02-11 16:01:15.643] State: idle - initialized
+[2026-02-11 16:01:15.685] State: dispatched - transition from MedicalAgentState.IDLE due to MEDICAL_EMERGENCY
+
+GOALS:
+--------------------------------------------------------------------------------
+- [ACTIVE] Reach medical emergency quickly (Priority: 5)
+- [PENDING] Stabilize and treat injured patients (Priority: 5)
+- [PENDING] Transport critical patients to medical facilities (Priority: 4)
+
+EXECUTION TRACE:
+--------------------------------------------------------------------------------
+[2026-02-11 16:01:15.643] [M002] Agent Medical Team Bravo initialized in state MedicalAgentState.IDLE
+[2026-02-11 16:01:15.644] [M002] Goal added: Reach medical emergency quickly
+[2026-02-11 16:01:15.645] [M002] Goal added: Stabilize and treat injured patients
+[2026-02-11 16:01:15.646] [M002] Goal added: Transport critical patients to medical facilities
+[2026-02-11 16:01:15.682] [M002] Event received: MEDICAL_EMERGENCY - {'location': (37, 80), 'injured_count': 3, 'severity': 'medium', 'needs_evacuation': True}
+[2026-02-11 16:01:15.683] [M002] Processing event: MEDICAL_EMERGENCY
+[2026-02-11 16:01:15.684] [M002] Dispatched to medical emergency at (37, 80) (3 injured, severity: medium)
+[2026-02-11 16:01:15.685] [M002] State transition: MedicalAgentState.IDLE -> MedicalAgentState.DISPATCHED (triggered by MEDICAL_EMERGENCY)
+[2026-02-11 16:01:15.685] [M002] Moving to emergency: now at (1, 1)
+[2026-02-11 16:01:15.686] [M002] Moving to emergency: now at (2, 2)
+[2026-02-11 16:01:15.686] [M002] Moving to emergency: now at (3, 3)
+[2026-02-11 16:01:15.687] [M002] Moving to emergency: now at (4, 4)
+[2026-02-11 16:01:15.688] [M002] Moving to emergency: now at (5, 5)
+[2026-02-11 16:01:15.688] [M002] Moving to emergency: now at (6, 6)
+[2026-02-11 16:01:15.689] [M002] Moving to emergency: now at (7, 7)
+[2026-02-11 16:01:15.690] [M002] Moving to emergency: now at (8, 8)
+[2026-02-11 16:01:15.690] [M002] Moving to emergency: now at (9, 9)
+[2026-02-11 16:01:15.691] [M002] Moving to emergency: now at (10, 10)
+[2026-02-11 16:01:15.691] [M002] Moving to emergency: now at (11, 11)
+[2026-02-11 16:01:15.692] [M002] Moving to emergency: now at (12, 12)
+[2026-02-11 16:01:15.692] [M002] Moving to emergency: now at (13, 13)
+[2026-02-11 16:01:15.693] [M002] Moving to emergency: now at (14, 14)
+[2026-02-11 16:01:15.693] [M002] Moving to emergency: now at (15, 15)
+[2026-02-11 16:01:15.694] [M002] Moving to emergency: now at (16, 16)
+[2026-02-11 16:01:15.695] [M002] Moving to emergency: now at (17, 17)
+[2026-02-11 16:01:15.696] [M002] Moving to emergency: now at (18, 18)
+[2026-02-11 16:01:15.696] [M002] Moving to emergency: now at (19, 19)
+[2026-02-11 16:01:15.697] [M002] Moving to emergency: now at (20, 20)
+[2026-02-11 16:01:15.698] [M002] Moving to emergency: now at (21, 21)
+[2026-02-11 16:01:15.698] [M002] Moving to emergency: now at (22, 22)
+[2026-02-11 16:01:15.699] [M002] Moving to emergency: now at (23, 23)
+[2026-02-11 16:01:15.699] [M002] Moving to emergency: now at (24, 24)
+[2026-02-11 16:01:15.700] [M002] Moving to emergency: now at (25, 25)
+[2026-02-11 16:01:15.701] [M002] Moving to emergency: now at (26, 26)
+[2026-02-11 16:01:15.701] [M002] Moving to emergency: now at (27, 27)
+[2026-02-11 16:01:15.702] [M002] Moving to emergency: now at (28, 28)
+[2026-02-11 16:01:15.702] [M002] Moving to emergency: now at (29, 29)
+[2026-02-11 16:01:15.703] [M002] Moving to emergency: now at (30, 30)
+[2026-02-11 16:01:15.703] [M002] Moving to emergency: now at (31, 31)
+[2026-02-11 16:01:15.704] [M002] Moving to emergency: now at (32, 32)
+[2026-02-11 16:01:15.704] [M002] Moving to emergency: now at (33, 33)
+[2026-02-11 16:01:15.705] [M002] Moving to emergency: now at (34, 34)
+[2026-02-11 16:01:15.706] [M002] Moving to emergency: now at (35, 35)
+[2026-02-11 16:01:15.706] [M002] Moving to emergency: now at (36, 36)
+[2026-02-11 16:01:15.707] [M002] Moving to emergency: now at (37, 37)
+[2026-02-11 16:01:15.707] [M002] Moving to emergency: now at (37, 38)
+[2026-02-11 16:01:15.708] [M002] Moving to emergency: now at (37, 39)
+[2026-02-11 16:01:15.708] [M002] Moving to emergency: now at (37, 40)
+[2026-02-11 16:01:15.709] [M002] Moving to emergency: now at (37, 41)
+[2026-02-11 16:01:15.709] [M002] Moving to emergency: now at (37, 42)
+[2026-02-11 16:01:15.710] [M002] Moving to emergency: now at (37, 43)
+[2026-02-11 16:01:15.710] [M002] Moving to emergency: now at (37, 44)
+[2026-02-11 16:01:15.711] [M002] Moving to emergency: now at (37, 45)
+[2026-02-11 16:01:15.712] [M002] Moving to emergency: now at (37, 46)
+[2026-02-11 16:01:15.713] [M002] Moving to emergency: now at (37, 47)
+[2026-02-11 16:01:15.714] [M002] Moving to emergency: now at (37, 48)
+[2026-02-11 16:01:15.715] [M002] Moving to emergency: now at (37, 49)
+
