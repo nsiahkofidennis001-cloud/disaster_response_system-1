@@ -36,7 +36,7 @@ class CoordinatorAgent(CommunicatingAgent):
         self.active_missions: Dict[str, Dict] = {}  # agent_id -> mission_info
         self.situation_reports: List[Dict] = []
         
-        # Override message handlers
+        #handlers
         self.register_message_handler(Performative.INFORM, self._handle_field_inform)
         self.register_message_handler(Performative.CONFIRM, self._handle_confirmation)
         self.register_message_handler(Performative.REFUSE, self._handle_refusal)
@@ -54,7 +54,7 @@ class CoordinatorAgent(CommunicatingAgent):
         self.current_state = CoordinatorState.ASSESSING
         self._log_trace(f"Assessing disaster situation: {disaster_info}")
         
-        # Create assessment report
+
         assessment = {
             "disaster_type": disaster_info.get("type"),
             "location": disaster_info.get("location"),
@@ -76,7 +76,7 @@ class CoordinatorAgent(CommunicatingAgent):
         location = mission_details.get("location")
         mission_type = mission_details.get("type")
         
-        # Dispatch available field agents
+        
         dispatched = 0
         required = mission_details.get("required_agents", 1)
         

@@ -149,7 +149,7 @@ class FSMAgent:
         """Check and update goal status"""
         for goal in self.goals:
             if goal.status == "active":
-                # Subclasses should override this to implement goal-specific logic
+                
                 pass
     
     def _log_trace(self, message: str):
