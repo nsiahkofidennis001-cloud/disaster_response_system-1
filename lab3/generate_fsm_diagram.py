@@ -88,10 +88,10 @@ def create_text_diagrams():
 RESCUE AGENT FSM
 ================
 
-    [IDLE] ──(Emergency Event)──> [RESPONDING] ──(Arrived)──> [RESCUING]
-      ↑                                                           |
+    [IDLE] --(Emergency Event)--> [RESPONDING] --(Arrived)--> [RESCUING]
+      ^                                                           |
       |                                                           |
-      └──(Reset)── [COMPLETED] <──(Delivered)── [TRANSPORTING] <─┘
+      +--(Reset)-- [COMPLETED] <--(Delivered)-- [TRANSPORTING] <--+
                                                   (Rescue Complete)
 
 States:
@@ -111,13 +111,13 @@ Events:
 MEDICAL AGENT FSM
 =================
 
-    [IDLE] ──(Medical Emergency)──> [DISPATCHED] ──(Arrived)──> [TREATING]
-      ↑                                                             |    |
+    [IDLE] --(Medical Emergency)--> [DISPATCHED] --(Arrived)--> [TREATING]
+      ^                                                             |    |
       |                                                             |    |
-      └──(Reset)────── [COMPLETED] <───────────────────────────────┘    |
-                            ↑                                            |
+      +--(Reset)------ [COMPLETED] <--------------------------------+    |
+                            ^                                            |
                             |                                            |
-                            └────(Delivered)──── [TRANSPORTING] <────────┘
+                            +----(Delivered)---- [TRANSPORTING] <--------+
                                                 (Needs Evacuation)
 
 States:
@@ -131,7 +131,7 @@ Events:
   - MEDICAL_EMERGENCY: Medical emergency with injured patients
 """
     
-    with open('fsm_diagrams_text.txt', 'w') as f:
+    with open('fsm_diagrams_text.txt', 'w', encoding='utf-8') as f:
         f.write(rescue_text)
         f.write("\n" + "="*80 + "\n\n")
         f.write(medical_text)

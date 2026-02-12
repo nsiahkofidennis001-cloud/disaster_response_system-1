@@ -476,3 +476,115 @@
 2026-02-11 16:29:16,008 - Agent-M002 - INFO - Moving to emergency: now at (37, 47)
 2026-02-11 16:29:16,009 - Agent-M002 - INFO - Moving to emergency: now at (37, 48)
 2026-02-11 16:29:16,009 - Agent-M002 - INFO - Moving to emergency: now at (37, 49)
+2026-02-12 01:44:19,316 - Agent-R001 - INFO - Agent Rescue Unit Alpha initialized in state RescueAgentState.IDLE
+2026-02-12 01:44:19,317 - Agent-R001 - INFO - Goal added: Respond to emergency events within minimal time
+2026-02-12 01:44:19,317 - Agent-R001 - INFO - Goal added: Locate and rescue trapped individuals
+2026-02-12 01:44:19,317 - Agent-R001 - INFO - Goal added: Transport rescued victims to medical facilities
+2026-02-12 01:44:19,318 - Agent-R002 - INFO - Agent Rescue Unit Bravo initialized in state RescueAgentState.IDLE
+2026-02-12 01:44:19,318 - Agent-R002 - INFO - Goal added: Respond to emergency events within minimal time
+2026-02-12 01:44:19,319 - Agent-R002 - INFO - Goal added: Locate and rescue trapped individuals
+2026-02-12 01:44:19,319 - Agent-R002 - INFO - Goal added: Transport rescued victims to medical facilities
+2026-02-12 01:44:19,319 - Agent-M001 - INFO - Agent Medical Team Alpha initialized in state MedicalAgentState.IDLE
+2026-02-12 01:44:19,321 - Agent-M001 - INFO - Goal added: Reach medical emergency quickly
+2026-02-12 01:44:19,321 - Agent-M001 - INFO - Goal added: Stabilize and treat injured patients
+2026-02-12 01:44:19,321 - Agent-M001 - INFO - Goal added: Transport critical patients to medical facilities
+2026-02-12 01:44:19,322 - Agent-M002 - INFO - Agent Medical Team Bravo initialized in state MedicalAgentState.IDLE
+2026-02-12 01:44:19,322 - Agent-M002 - INFO - Goal added: Reach medical emergency quickly
+2026-02-12 01:44:19,323 - Agent-M002 - INFO - Goal added: Stabilize and treat injured patients
+2026-02-12 01:44:19,323 - Agent-M002 - INFO - Goal added: Transport critical patients to medical facilities
+2026-02-12 01:44:19,326 - Agent-R001 - INFO - Event received: BUILDING_COLLAPSE - {'location': (15, 20), 'damage_level': 0.9, 'trapped_people': 5}
+2026-02-12 01:44:19,327 - Agent-R001 - INFO - Processing event: BUILDING_COLLAPSE
+2026-02-12 01:44:19,327 - Agent-R001 - INFO - Responding to BUILDING_COLLAPSE at location (15, 20)
+2026-02-12 01:44:19,328 - Agent-R001 - INFO - State transition: RescueAgentState.IDLE -> RescueAgentState.RESPONDING (triggered by BUILDING_COLLAPSE)
+2026-02-12 01:44:19,328 - Agent-R001 - INFO - Moving to target: now at (1, 1)
+2026-02-12 01:44:19,329 - Agent-R001 - INFO - Moving to target: now at (2, 2)
+2026-02-12 01:44:19,329 - Agent-R001 - INFO - Moving to target: now at (3, 3)
+2026-02-12 01:44:19,329 - Agent-R001 - INFO - Moving to target: now at (4, 4)
+2026-02-12 01:44:19,330 - Agent-R001 - INFO - Moving to target: now at (5, 5)
+2026-02-12 01:44:19,330 - Agent-R001 - INFO - Moving to target: now at (6, 6)
+2026-02-12 01:44:19,331 - Agent-R001 - INFO - Moving to target: now at (7, 7)
+2026-02-12 01:44:19,331 - Agent-R001 - INFO - Moving to target: now at (8, 8)
+2026-02-12 01:44:19,331 - Agent-R001 - INFO - Moving to target: now at (9, 9)
+2026-02-12 01:44:19,332 - Agent-R001 - INFO - Moving to target: now at (10, 10)
+2026-02-12 01:44:19,332 - Agent-R001 - INFO - Moving to target: now at (11, 11)
+2026-02-12 01:44:19,332 - Agent-R001 - INFO - Moving to target: now at (12, 12)
+2026-02-12 01:44:19,333 - Agent-R001 - INFO - Moving to target: now at (13, 13)
+2026-02-12 01:44:19,333 - Agent-R001 - INFO - Moving to target: now at (14, 14)
+2026-02-12 01:44:19,333 - Agent-R001 - INFO - Moving to target: now at (15, 15)
+2026-02-12 01:44:19,334 - Agent-R001 - INFO - Moving to target: now at (15, 16)
+2026-02-12 01:44:19,334 - Agent-R001 - INFO - Moving to target: now at (15, 17)
+2026-02-12 01:44:19,335 - Agent-R001 - INFO - Moving to target: now at (15, 18)
+2026-02-12 01:44:19,335 - Agent-R001 - INFO - Moving to target: now at (15, 19)
+2026-02-12 01:44:19,335 - Agent-R001 - INFO - Moving to target: now at (15, 20)
+2026-02-12 01:44:19,338 - Agent-M001 - INFO - Event received: MEDICAL_EMERGENCY - {'location': (10, 15), 'injured_count': 8, 'severity': 'critical', 'needs_evacuation': True}
+2026-02-12 01:44:19,339 - Agent-M001 - INFO - Processing event: MEDICAL_EMERGENCY
+2026-02-12 01:44:19,340 - Agent-M001 - INFO - Dispatched to medical emergency at (10, 15) (8 injured, severity: critical)
+2026-02-12 01:44:19,340 - Agent-M001 - INFO - State transition: MedicalAgentState.IDLE -> MedicalAgentState.DISPATCHED (triggered by MEDICAL_EMERGENCY)
+2026-02-12 01:44:19,340 - Agent-M001 - INFO - Moving to emergency: now at (1, 1)
+2026-02-12 01:44:19,341 - Agent-M001 - INFO - Moving to emergency: now at (2, 2)
+2026-02-12 01:44:19,341 - Agent-M001 - INFO - Moving to emergency: now at (3, 3)
+2026-02-12 01:44:19,341 - Agent-M001 - INFO - Moving to emergency: now at (4, 4)
+2026-02-12 01:44:19,342 - Agent-M001 - INFO - Moving to emergency: now at (5, 5)
+2026-02-12 01:44:19,342 - Agent-M001 - INFO - Moving to emergency: now at (6, 6)
+2026-02-12 01:44:19,343 - Agent-M001 - INFO - Moving to emergency: now at (7, 7)
+2026-02-12 01:44:19,343 - Agent-M001 - INFO - Moving to emergency: now at (8, 8)
+2026-02-12 01:44:19,343 - Agent-M001 - INFO - Moving to emergency: now at (9, 9)
+2026-02-12 01:44:19,344 - Agent-M001 - INFO - Moving to emergency: now at (10, 10)
+2026-02-12 01:44:19,344 - Agent-M001 - INFO - Moving to emergency: now at (10, 11)
+2026-02-12 01:44:19,345 - Agent-M001 - INFO - Moving to emergency: now at (10, 12)
+2026-02-12 01:44:19,345 - Agent-M001 - INFO - Moving to emergency: now at (10, 13)
+2026-02-12 01:44:19,346 - Agent-M001 - INFO - Moving to emergency: now at (10, 14)
+2026-02-12 01:44:19,346 - Agent-M001 - INFO - Moving to emergency: now at (10, 15)
+2026-02-12 01:44:19,351 - Agent-M002 - INFO - Event received: MEDICAL_EMERGENCY - {'location': (37, 80), 'injured_count': 3, 'severity': 'medium', 'needs_evacuation': True}
+2026-02-12 01:44:19,352 - Agent-M002 - INFO - Processing event: MEDICAL_EMERGENCY
+2026-02-12 01:44:19,352 - Agent-M002 - INFO - Dispatched to medical emergency at (37, 80) (3 injured, severity: medium)
+2026-02-12 01:44:19,353 - Agent-M002 - INFO - State transition: MedicalAgentState.IDLE -> MedicalAgentState.DISPATCHED (triggered by MEDICAL_EMERGENCY)
+2026-02-12 01:44:19,353 - Agent-M002 - INFO - Moving to emergency: now at (1, 1)
+2026-02-12 01:44:19,354 - Agent-M002 - INFO - Moving to emergency: now at (2, 2)
+2026-02-12 01:44:19,354 - Agent-M002 - INFO - Moving to emergency: now at (3, 3)
+2026-02-12 01:44:19,355 - Agent-M002 - INFO - Moving to emergency: now at (4, 4)
+2026-02-12 01:44:19,355 - Agent-M002 - INFO - Moving to emergency: now at (5, 5)
+2026-02-12 01:44:19,355 - Agent-M002 - INFO - Moving to emergency: now at (6, 6)
+2026-02-12 01:44:19,356 - Agent-M002 - INFO - Moving to emergency: now at (7, 7)
+2026-02-12 01:44:19,356 - Agent-M002 - INFO - Moving to emergency: now at (8, 8)
+2026-02-12 01:44:19,357 - Agent-M002 - INFO - Moving to emergency: now at (9, 9)
+2026-02-12 01:44:19,357 - Agent-M002 - INFO - Moving to emergency: now at (10, 10)
+2026-02-12 01:44:19,357 - Agent-M002 - INFO - Moving to emergency: now at (11, 11)
+2026-02-12 01:44:19,358 - Agent-M002 - INFO - Moving to emergency: now at (12, 12)
+2026-02-12 01:44:19,358 - Agent-M002 - INFO - Moving to emergency: now at (13, 13)
+2026-02-12 01:44:19,358 - Agent-M002 - INFO - Moving to emergency: now at (14, 14)
+2026-02-12 01:44:19,359 - Agent-M002 - INFO - Moving to emergency: now at (15, 15)
+2026-02-12 01:44:19,359 - Agent-M002 - INFO - Moving to emergency: now at (16, 16)
+2026-02-12 01:44:19,359 - Agent-M002 - INFO - Moving to emergency: now at (17, 17)
+2026-02-12 01:44:19,360 - Agent-M002 - INFO - Moving to emergency: now at (18, 18)
+2026-02-12 01:44:19,360 - Agent-M002 - INFO - Moving to emergency: now at (19, 19)
+2026-02-12 01:44:19,361 - Agent-M002 - INFO - Moving to emergency: now at (20, 20)
+2026-02-12 01:44:19,361 - Agent-M002 - INFO - Moving to emergency: now at (21, 21)
+2026-02-12 01:44:19,362 - Agent-M002 - INFO - Moving to emergency: now at (22, 22)
+2026-02-12 01:44:19,362 - Agent-M002 - INFO - Moving to emergency: now at (23, 23)
+2026-02-12 01:44:19,362 - Agent-M002 - INFO - Moving to emergency: now at (24, 24)
+2026-02-12 01:44:19,363 - Agent-M002 - INFO - Moving to emergency: now at (25, 25)
+2026-02-12 01:44:19,363 - Agent-M002 - INFO - Moving to emergency: now at (26, 26)
+2026-02-12 01:44:19,364 - Agent-M002 - INFO - Moving to emergency: now at (27, 27)
+2026-02-12 01:44:19,364 - Agent-M002 - INFO - Moving to emergency: now at (28, 28)
+2026-02-12 01:44:19,364 - Agent-M002 - INFO - Moving to emergency: now at (29, 29)
+2026-02-12 01:44:19,365 - Agent-M002 - INFO - Moving to emergency: now at (30, 30)
+2026-02-12 01:44:19,365 - Agent-M002 - INFO - Moving to emergency: now at (31, 31)
+2026-02-12 01:44:19,366 - Agent-M002 - INFO - Moving to emergency: now at (32, 32)
+2026-02-12 01:44:19,366 - Agent-M002 - INFO - Moving to emergency: now at (33, 33)
+2026-02-12 01:44:19,366 - Agent-M002 - INFO - Moving to emergency: now at (34, 34)
+2026-02-12 01:44:19,367 - Agent-M002 - INFO - Moving to emergency: now at (35, 35)
+2026-02-12 01:44:19,367 - Agent-M002 - INFO - Moving to emergency: now at (36, 36)
+2026-02-12 01:44:19,368 - Agent-M002 - INFO - Moving to emergency: now at (37, 37)
+2026-02-12 01:44:19,368 - Agent-M002 - INFO - Moving to emergency: now at (37, 38)
+2026-02-12 01:44:19,369 - Agent-M002 - INFO - Moving to emergency: now at (37, 39)
+2026-02-12 01:44:19,369 - Agent-M002 - INFO - Moving to emergency: now at (37, 40)
+2026-02-12 01:44:19,369 - Agent-M002 - INFO - Moving to emergency: now at (37, 41)
+2026-02-12 01:44:19,370 - Agent-M002 - INFO - Moving to emergency: now at (37, 42)
+2026-02-12 01:44:19,370 - Agent-M002 - INFO - Moving to emergency: now at (37, 43)
+2026-02-12 01:44:19,371 - Agent-M002 - INFO - Moving to emergency: now at (37, 44)
+2026-02-12 01:44:19,371 - Agent-M002 - INFO - Moving to emergency: now at (37, 45)
+2026-02-12 01:44:19,371 - Agent-M002 - INFO - Moving to emergency: now at (37, 46)
+2026-02-12 01:44:19,372 - Agent-M002 - INFO - Moving to emergency: now at (37, 47)
+2026-02-12 01:44:19,372 - Agent-M002 - INFO - Moving to emergency: now at (37, 48)
+2026-02-12 01:44:19,373 - Agent-M002 - INFO - Moving to emergency: now at (37, 49)
